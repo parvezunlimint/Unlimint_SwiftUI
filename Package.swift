@@ -84,6 +84,7 @@ let package = Package(
             dependencies: ["Moya",
                            "Alamofire",
                            "matomo-sdk-ios",
-                          "UnlimintSDKCore"])
+                          "UnlimintSDKCore"] ,
+          path: "Sources")
     ]
 )
