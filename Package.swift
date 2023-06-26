@@ -78,7 +78,7 @@ let package = Package(
             .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from:ALAMOFIRE_VERSION))
     ],
     targets: [
-        .binaryTarget(name: "UnlimintSDKCore", path: "./Sources/UnlimintSDK_Core/UnlimintSDK_Core.xcframework"),
+        .binaryTarget(name: "UnlimintSDKCore", path: "./Sources/UnlimintSDK_Core.xcframework"),
         .target(
             name: "UnlimintSDKCore",
             dependencies: ["Moya",
