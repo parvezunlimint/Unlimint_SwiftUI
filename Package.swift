@@ -69,7 +69,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Unlimint_SwiftUI",
-            targets: ["UnlimintSDK_Core"]),
+            targets: ["UnlimintSDKCore"]),
     ],
     dependencies: [
             .package(url: "https://github.com/Swinject/Swinject.git", from: SWINJECT_VERSION),
@@ -78,9 +78,9 @@ let package = Package(
             .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from:ALAMOFIRE_VERSION))
     ],
     targets: [
-        .binaryTarget(name: "UnlimintSDK_Core", path: "./Sources/UnlimintSDK_Core/UnlimintSDK_Core.xcframework"),
+        .binaryTarget(name: "UnlimintSDKCore", path: "./Sources/UnlimintSDK_Core/UnlimintSDK_Core.xcframework"),
         .target(
-            name: "UnlimintSDK_Core",
+            name: "UnlimintSDKCore",
             dependencies: ["Moya",
                            "Alamofire",
                            "matomo-sdk-ios"])
