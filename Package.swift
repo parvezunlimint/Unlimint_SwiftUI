@@ -105,9 +105,9 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
 
-//        .package(url: "https://github.com/Swinject/Swinject.git", from: SWINJECT_VERSION),
-//        .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: MOYA_VERSION)),
-//        .package(url: "https://github.com/matomo-org/matomo-sdk-ios.git", .upToNextMajor(from: MOTAMO_VERSION))
+        .package(url: "https://github.com/Swinject/Swinject.git", from: SWINJECT_VERSION),
+        .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: MOYA_VERSION)),
+        .package(url: "https://github.com/matomo-org/matomo-sdk-ios.git", .upToNextMajor(from: MOTAMO_VERSION))
         
     ],
     targets: [
