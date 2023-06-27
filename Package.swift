@@ -124,7 +124,7 @@ let package = Package(
         
         
 //        .target(
-//            name: "UnlimintSDKCoreTarget",
+//            name: "UnlimintSDK_Core",
 //            dependencies: ["Moya",
 //                           "matomo-sdk-ios",
 //                           "UnlimintSDK_Core"]),
