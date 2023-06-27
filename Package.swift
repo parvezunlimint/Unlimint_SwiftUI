@@ -116,7 +116,8 @@ let package = Package(
         
         .binaryTarget(
                     name: "UnlimintSDK_Core",
-                    path: "./Sources/UnlimintSDK_Core.xcframework"),
+                    url: "https://github.com/cardpay/ios-sdk-podspec/releases/download/2.0.1/UnlimintSDK_Core.zip",
+                    checksum: "c4e46a2bb0f972a423bdae259c57f94f8b7a51d768a20d9acfd2aad7cbe8e898"),
         
 //        .binaryTarget(name: "UnlimintSDK_SwiftUI",
 //                      path: "./Sources/UnlimintSDK_SwiftUI.xcframework"),
