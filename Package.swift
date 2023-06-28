@@ -157,7 +157,8 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/Swinject/Swinject.git", from: SWINJECT_VERSION),
     .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: MOYA_VERSION)),
-    .package(url: "https://github.com/matomo-org/matomo-sdk-ios.git", .upToNextMajor(from: MOTAMO_VERSION))
+    .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: ALAMOFIRE_VERSION))
+
   ],
   
   targets: [
@@ -178,13 +179,15 @@ let package = Package(
         ),
         .product(name: "Swinject", package: "Swinject"),
         .product(name: "Moya", package: "Moya"),
-        //.product(name: "MatomoTracker", package: "MatomoTracker"),
+        .product(name: "Alamofire", package: "Alamofire")
+        
       ],
       path: "UnlimintSDK_Core_Wrapper",
       linkerSettings: [
         .linkedLibrary("z"),
       ]
     ),
+    
     .binaryTarget(
       name: "UnlimintSDK_Core",
       url: "https://github.com/cardpay/ios-sdk-podspec/releases/download/2.0.1/UnlimintSDK_Core.zip",
