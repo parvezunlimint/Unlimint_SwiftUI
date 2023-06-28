@@ -165,8 +165,11 @@ let package = Package(
     
     .target(
       name: "UnlimintSDK_CoreTarget",
-      dependencies: [.target(name: "UnlimintSDK_Core_Wrapper",
-                             condition: .when(platforms: [.iOS, .macCatalyst, .macOS, .tvOS]))],
+      dependencies: [
+        .target(name: "UnlimintSDK_Core_Wrapper", condition: .when(platforms: [.iOS, .macCatalyst, .macOS, .tvOS])),
+        .target(name: "Unlimint_Alamofire", condition: .when(platforms: [.iOS, .macCatalyst, .macOS, .tvOS]))
+        
+      ],
       path: "UnlimintSDK_Core"
     ),
 
@@ -179,13 +182,28 @@ let package = Package(
         ),
         .product(name: "Swinject", package: "Swinject"),
         .product(name: "Moya", package: "Moya"),
-        .product(name: "Alamofire", package: "Alamofire")
-        
       ],
       path: "UnlimintSDK_Core_Wrapper",
       linkerSettings: [
         .linkedLibrary("z"),
       ]
+    ),
+    
+    
+    .target(
+        name: "Unlimint_Alamofire",
+        dependencies: [
+            .target(
+                name: "UnlimintSDK_Core",
+                condition: .when(platforms: [.iOS])
+            ),
+            .product(name: "Alamofire", package: "Alamofire")
+                
+        ],
+        path: "Unlimint_Alamofire",
+        linkerSettings: [
+            .linkedLibrary("z"),
+        ]
     ),
     
     .binaryTarget(
