@@ -147,7 +147,7 @@ let UNLIMINT_SWIFTUI_VERSION: PackageDescription.Version = "2.0.1"
 let package = Package(
     
   name: "Unlimint",
-  platforms: [.iOS(.v11), .macCatalyst(.v13), .macOS(.v10_13), .tvOS(.v12), .watchOS(.v7)],
+  platforms: [.iOS(.v14)],
   products: [
     .library(
       name: "UnlimintSDK_Core",
@@ -208,8 +208,8 @@ let package = Package(
     
     .binaryTarget(
       name: "UnlimintSDK_Core",
-      url: "https://github.com/cardpay/ios-sdk-podspec/releases/download/2.0.1/UnlimintSDK_Core.zip",
-      checksum: "c4e46a2bb0f972a423bdae259c57f94f8b7a51d768a20d9acfd2aad7cbe8e898"
+      url: "https://github.com/parvezunlimint/TestingPackage/releases/download/1.0.0/UnlimintSDK-Core.zip",
+      checksum: "2b33a0035c53af54aed4d53667a4efeb942458ad2dcb418c1a6bf61bf36fe51d"
     )
   ],
   swiftLanguageVersions: [.v5]
